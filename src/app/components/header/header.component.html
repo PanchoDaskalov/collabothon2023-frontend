@@ -8,5 +8,6 @@
   </li>
   <li class="nav-item text-end">
     <img *ngIf="showPhoto" src="./assets/images/dummy-portrait.jpg" alt="logo" class="header-image" id="" [routerLink]="['/profile']" >
+    <div *ngIf="!showPhoto">&nbsp;</div>
   </li>
 </ul>

@@ -1,6 +1,7 @@
 {
   "hello": "Hello",
   "register": "Register",
+  "login": "Login here >>",
   "language": "Language",
   "landing-description": "Onboarding migrants in the local financial system.",
   "landing-description-2": "Your fortune starts here",
@@ -34,7 +35,7 @@
     "sex": "sex",
     "e-mail": "e-mail",
     "origin-country": "Origin Country",
-    "current-country": "Current Country",
+    "host-country": "Host Country",
     "phone-number": "Phone Number"
   },
   "documents": {

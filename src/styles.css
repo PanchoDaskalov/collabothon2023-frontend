@@ -17,3 +17,30 @@ html {
 .color-black {
   color: black !important;
 }
+
+
+/* OVERWRITING BOOTSTRAP */
+.input-group-text {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 !important;
+  background-color: white;
+  padding-left: 0;
+}
+
+.form-control {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 !important;
+  text-align: end;
+}
+
+.form-select {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-radius: 0 !important;
+  text-align: end;
+}

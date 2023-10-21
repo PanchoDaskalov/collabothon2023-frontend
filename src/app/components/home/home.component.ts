@@ -1,6 +1,5 @@
 import { UserService } from '../../services/user.service'
 import { Component, OnInit } from '@angular/core'
-import { TranslocoService } from '@ngneat/transloco'
 
 @Component({
     selector: 'app-home',
@@ -9,22 +8,19 @@ import { TranslocoService } from '@ngneat/transloco'
 })
 export class HomeComponent implements OnInit {
     content?: string
-    title: string
 
-    constructor(private userService: UserService, private readonly translocoService: TranslocoService) {
-        this.title = ''
+    constructor(private userService: UserService) {
     }
 
     ngOnInit() {
-        this.title = this.translocoService.translate('hello') + ', Ivan'
-        console.log('title', this.title)
-        this.userService.getUser().subscribe({
+        
+        /* this.userService.getUser().subscribe({
             next: (data) => {
                 this.content = data
             },
             error: (err: any) => {
                 this.content = JSON.parse(err.error).errorMassage
             },
-        })
+        }) */
     }
 }
