@@ -1,8 +1,5 @@
-import { Component } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { MatIconModule } from '@angular/material/icon'
-import { MatButtonModule } from '@angular/material/button'
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { Component, OnInit, Input } from '@angular/core'
+import { UserService } from '../../services/user.service';
 
 @Component({
     selector: 'app-header',
@@ -11,4 +8,17 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     standalone: false,
     // imports: [MatToolbarModule, MatButtonModule, MatIconModule, CommonModule],
 })
-export class HeaderComponent {}
+export class HeaderComponent implements OnInit {
+
+  @Input() pagetitle!: string;
+  @Input() subtitle!: string;
+  @Input() showPhoto!: boolean;
+
+  constructor(private userService: UserService) {
+
+  }
+
+  ngOnInit(): void {
+    console.log("showPhoto: ", this.showPhoto)
+  }
+}

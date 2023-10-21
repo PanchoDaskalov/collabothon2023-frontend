@@ -1,20 +1,13 @@
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<ul class="nav nav-pills nav-fill my-4">
+  <li class="nav-item text-start">
+    <img src="./assets/images/mifi-logo-small.png" alt="logo" class="header-image" id="" routerLink="/">
+  </li>
+  <li class="nav-item">
+    <h1>{{pagetitle}}</h1>
+    <div class="subtitle" *ngIf="subtitle.length > 0">subtitle</div>
+  </li>
+  <li class="nav-item text-end">
+    <img *ngIf="showPhoto" src="./assets/images/dummy-portrait.jpg" alt="logo" class="header-image" id="" routerLink="/profile">
+    <!-- <span *ngIf="!showPhoto" >&nbsp;</span> -->
+  </li>
+</ul>
