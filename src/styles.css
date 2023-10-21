@@ -41,6 +41,22 @@ html {
   left: 45%;
 }
 
+.small-container {
+  background-color: #E9E9E9;
+}
+
+.small-container-entry {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  color: #0050AD;
+}
+
+.small-container-entry img {
+  height: 1rem;
+}
+
 /* OVERWRITING BOOTSTRAP */
 .input-group-text {
   border-left: 0;
