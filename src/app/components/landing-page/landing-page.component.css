@@ -1,0 +1,12 @@
+.landing-header > img {
+  height: 5rem;
+}
+
+#slogan {
+  line-height: 1.5 !important;
+  border-radius: 15px;
+}
+
+.landing-dummy-logo {
+  height: 2rem;
+}

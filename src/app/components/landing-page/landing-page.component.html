@@ -1,8 +1,36 @@
-<h3>Landing Page</h3>
-logo <br />
-page content<br/>
-register link<br/>
+<div class="landing-header my-5 text-center">
+    <img src="./assets/images/mifi-logo-large.png" alt="logo" />
+</div>
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 bg-white h1 p-4" id="slogan">
+        {{ 'landing-description' | transloco }} <br />
+        <br />
+        {{ 'landing-description-2' | transloco }}
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<div class="row mt-2">
+  <div class="col-1"></div>
+  <div class="col-10 text-muted h5 p-4 text-center" id="trusted-by">
+      {{ 'trusted-by' | transloco }}
+      <div class="mt-4">
+        <img src="./assets/images/coba-logo.png" class="landing-dummy-logo mx-3" />
+        <img src="./assets/images/coba-logo.png" class="landing-dummy-logo mx-3" />
+        <img src="./assets/images/coba-logo.png" class="landing-dummy-logo mx-3" />
+      </div>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+<div class="row ">
+  <div class="col text-center">
+    <button class="btn btn-primary" [routerLink]="['/register']">{{ 'no-bank-account' | transloco }}</button>
+  </div>
+</div>
 
 <div class="language-switcher-container">
-  <app-language-switcher></app-language-switcher>
+    <app-language-switcher></app-language-switcher>
 </div>

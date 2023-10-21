@@ -1,0 +1,25 @@
+#language-switcher-select {
+  border: 0;
+  background-color: #EAF6FF;
+  color: #0050AD;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.color-black {
+  color: black !important;
+}
+
+.language-switcher-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+select:focus-visible {
+  border: 0 !important;
+  outline-width: 0 !important;
+  outline: none !important;
+}
