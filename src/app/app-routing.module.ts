@@ -8,6 +8,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BankListComponent } from './components/bank-list/bank-list.component'
 import { BankSingleComponent } from './components/bank-single/bank-single.component'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
+import { TestComponentComponent } from './components/test-component/test-component.component'
+import { TestComponentRenderer } from '@angular/core/testing'
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,6 +20,7 @@ const routes: Routes = [
     { path: 'banks', component: BankListComponent },
     { path: 'banks/:id', component: BankSingleComponent },
     { path: '404', component: PageNotFoundComponent },
+    { path: 'test', component: TestComponentComponent },
     { path: 'logout', redirectTo: '/' },
     { path: '**', redirectTo: '/404', pathMatch: 'full' },
 ]

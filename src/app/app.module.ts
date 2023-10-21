@@ -10,18 +10,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HomeComponent } from './components/home/home.component'
 import { LoginComponent } from './components/login/login.component'
 import { RegisterComponent } from './components/register/register.component'
-import { WizardComponent } from './components/wizard/wizard.component';
+import { WizardComponent } from './components/wizard/wizard.component'
 
-import { TestComponentComponent } from './components/test-component/test-component.component'
-
-import { authInterceptorProviders } from './interceptors/auth.interceptor';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { BankListComponent } from './components/bank-list/bank-list.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { BankSingleComponent } from './components/bank-single/bank-single.component';
+import { authInterceptorProviders } from './interceptors/auth.interceptor'
+import { LandingPageComponent } from './components/landing-page/landing-page.component'
+import { BankListComponent } from './components/bank-list/bank-list.component'
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
+import { BankSingleComponent } from './components/bank-single/bank-single.component'
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-    declarations: [AppComponent, TestComponentComponent, HomeComponent, LoginComponent, RegisterComponent, WizardComponent, LandingPageComponent, BankListComponent, PageNotFoundComponent, BankSingleComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent,
+        WizardComponent,
+        LandingPageComponent,
+        BankListComponent,
+        PageNotFoundComponent,
+        BankSingleComponent,
+        HeaderComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
