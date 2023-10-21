@@ -138,7 +138,7 @@
 
         <div class="row">
             <div class="col text-end mt-3">
-                <button type="button" class="btn btn-light" [routerLink]="['/']">{{ 'finish' | transloco }}</button>
+                <button type="button" class="btn btn-light" (click)="finishWizard()">{{ 'finish' | transloco }}</button>
             </div>
         </div>
     </mat-step>
@@ -146,4 +146,10 @@
 
 <div class="language-switcher-container">
     <app-language-switcher></app-language-switcher>
+</div>
+
+<div id="full-screen-loader" [ngClass]="{'d-none' : hideLoader}">
+  <div class="spinner-border text-primary" role="status" id="full-screen-loader-spinner">
+    <span class="visually-hidden">Loading...</span>
+  </div>
 </div>
