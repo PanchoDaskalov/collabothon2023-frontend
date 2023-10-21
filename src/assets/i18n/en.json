@@ -1,7 +1,8 @@
 {
   "hello": "Hello",
   "register": "Register",
-  "login": "Login here >>",
+  "login": "Login",
+  "login-button": "Login here >>",
   "language": "Language",
   "landing-description": "Onboarding migrants in the local financial system.",
   "landing-description-2": "Your fortune starts here",
