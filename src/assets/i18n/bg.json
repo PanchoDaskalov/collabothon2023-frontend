@@ -36,7 +36,8 @@
     "e-mail": "ел. поща",
     "origin-country": "Държава на произход",
     "host-country": "Текуща държава",
-    "phone-number": "Телефон"
+    "phone-number": "Телефон",
+    "password": "Парола"
   },
   "documents": {
     "uploaded": "качен",

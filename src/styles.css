@@ -14,10 +14,14 @@ html {
   width: 100%;
 }
 
+/* COMMON */
 .color-black {
   color: black !important;
 }
 
+.container-rounded {
+  border-radius: 15px;
+}
 
 /* OVERWRITING BOOTSTRAP */
 .input-group-text {
@@ -35,6 +39,7 @@ html {
   border-right: 0;
   border-radius: 0 !important;
   text-align: end;
+  background-color: white !important;
 }
 
 .form-select {
