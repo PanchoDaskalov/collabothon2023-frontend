@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { TranslocoService } from '@ngneat/transloco'
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+    constructor(private translocoService: TranslocoService) {
 
+    }
+
+    ngOnInit(): void {
+    }
 }

@@ -1,6 +1,7 @@
 {
   "hello": "Здравей",
   "register": "Регистрация",
+  "login": "Вход за регистрирани >>",
   "language": "Език",
   "landing-description": "Помагаме на мигранти да навлязат в местната финансова система.",
   "landing-description-2": "Богатството започва тук.",
@@ -34,7 +35,7 @@
     "sex": "пол",
     "e-mail": "ел. поща",
     "origin-country": "Държава на произход",
-    "current-country": "Текуща държава",
+    "host-country": "Текуща държава",
     "phone-number": "Телефон"
   },
   "documents": {
