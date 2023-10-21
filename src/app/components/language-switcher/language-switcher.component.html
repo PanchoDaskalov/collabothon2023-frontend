@@ -1,0 +1,7 @@
+<div class="input-group mb-3">
+    <span class="input-group-text bg-none" id="language-switcher-label">{{ 'language' | transloco }}</span>
+    <select class="form-select" aria-label="" (change)="changeLanguage($event.target)">
+        <option value="en" [ngValue]="'en'">{{ 'english' | transloco }}</option>
+        <option value="bg" [ngValue]="'bg'">{{ 'bulgarian' | transloco }}</option>
+    </select>
+</div>

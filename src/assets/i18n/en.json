@@ -1,0 +1,45 @@
+{
+  "hello": "Hello",
+  "register": "Register",
+  "language": "Language",
+  "landing-description": "Onboarding migrants in the local financial system.<br/><br/>Your fortune starts here",
+  "trusted-by": "Trusted by",
+  "no-bank-account": "NO BANK ACCOUNT? START HERE",
+  "english": "English",
+  "bulgarian": "Български",
+  "next": "next",
+  "other": "other",
+  "banks-n-services": "Bank Accounts & Services",
+  "learn-about-money": "Learn About Money",
+  "community-hub": "Community Hub",
+  "footer": {
+    "home": "home",
+    "banks": "banks",
+    "learn": "learn",
+    "hub": "hub"
+  },
+  "wizard": {
+    "how-it-works": "How It Works",
+    "scan-your-id": "Scan Your ID",
+    "personal-data": "Personal Data",
+    "additional-documents": "Additional Documents",
+    "take-photo": "Take a Photo",
+    "data-collection-completed": "Required Data Has Been Collected"
+  },
+  "personal": {
+    "name": "name",
+    "middle-name": "middle name",
+    "family-name": "family name",
+    "sex": "sex",
+    "e-mail": "e-mail",
+    "origin-country": "Origin Country",
+    "current-country": "Current Country",
+    "phone-number": "Phone Number"
+  },
+  "documents": {
+    "uploaded": "качен",
+    "doc-id": "личен документ",
+    "doc-rent": "договор за наем",
+    "doc-work": "договор за работа"
+  }
+}
