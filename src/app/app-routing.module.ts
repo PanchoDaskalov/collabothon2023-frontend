@@ -9,7 +9,9 @@ import { BankListComponent } from './components/bank-list/bank-list.component'
 import { BankSingleComponent } from './components/bank-single/bank-single.component'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 import { TestComponentComponent } from './components/test-component/test-component.component'
-import { ProfileComponent } from './profile/profile.component'
+import { ProfileComponent } from './components/profile/profile.component'
+import { LearnComponent } from './components/learn/learn.component'
+import { HubComponent } from './components/hub/hub.component'
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
     { path: 'banks', component: BankListComponent },
     { path: 'banks/:id', component: BankSingleComponent },
     { path: 'profile', component: ProfileComponent },
+    { path: 'learn', component: LearnComponent },
+    { path: 'hub', component: HubComponent },
     { path: '404', component: PageNotFoundComponent },
     { path: 'test', component: TestComponentComponent },
     { path: 'logout', redirectTo: '/' },

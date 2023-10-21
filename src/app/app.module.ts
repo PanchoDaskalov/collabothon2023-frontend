@@ -18,7 +18,10 @@ import { BankListComponent } from './components/bank-list/bank-list.component'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 import { BankSingleComponent } from './components/bank-single/bank-single.component'
 import { HeaderComponent } from './components/header/header.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LearnComponent } from './components/learn/learn.component';
+import { HubComponent } from './components/hub/hub.component';
 
 @NgModule({
     declarations: [
@@ -33,6 +36,9 @@ import { ProfileComponent } from './profile/profile.component';
         BankSingleComponent,
         HeaderComponent,
         ProfileComponent,
+        FooterComponent,
+        LearnComponent,
+        HubComponent,
     ],
     imports: [
         BrowserModule,
