@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { HomeComponent } from './home/home.component'
-import { LoginComponent } from './login/login.component'
-import { RegisterComponent } from './register/register.component'
+import { HomeComponent } from './components/home/home.component'
+import { LoginComponent } from './components/login/login.component'
+import { RegisterComponent } from './components/register/register.component'
+import { WizardComponent } from './components/wizard/wizard.component'
+import { LandingPageComponent } from './components/landing-page/landing-page.component'
+import { BankListComponent } from './components/bank-list/bank-list.component'
+import { BankSingleComponent } from './components/bank-single/bank-single.component'
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'wizard', component: WizardComponent },
+    { path: 'landing', component: LandingPageComponent },
+    { path: 'banks', component: BankListComponent },
+    { path: 'banks/:id', component: BankSingleComponent },
+    { path: '404', component: PageNotFoundComponent },
     { path: 'logout', redirectTo: '/' },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/404', pathMatch: 'full' },
 ]
 
 @NgModule({

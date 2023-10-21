@@ -1,4 +1,4 @@
-import { UserService } from '../services/user.service';
+import { UserService } from '../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,14 +13,14 @@ export class HomeComponent implements OnInit{
 
   constructor( private userService: UserService) {}
 
-  ngOnInit(){ 
+  ngOnInit(){
     this.userService.getUser().subscribe( {next: (data) => {
       this.content = data;
     },
     error: (err: any) =>{
       this.content = JSON.parse(err.error).errorMassage
     }
-  });  
+  });
 }
 
 }
