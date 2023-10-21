@@ -1,7 +1,155 @@
-<p>wizard works!</p>
+<app-header [pagetitle]="'onboarding' | transloco" [showPhoto]="false" [subtitle]="''"></app-header>
 
-header without profile <br>
+<mat-stepper orientation="vertical" class="mt-5" linear>
+    <mat-step>
+        <ng-template matStepLabel>{{ 'step' | transloco }} 1 - {{ 'wizard.how-it-works' | transloco }}</ng-template>
+        <ng-template matStepContent>
+            <p class="fst-italic">{{ 'wizard.step-1' | transloco }}</p>
+            <div class="row">
+                <div class="col text-end mt-3">
+                    <button type="button" class="btn btn-light" matStepperNext>{{ 'start' | transloco }}</button>
+                </div>
+            </div>
+        </ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>{{ 'step' | transloco }} 2 - {{ 'wizard.scan-your-id' | transloco }}</ng-template>
+        <ng-template matStepContent>
+            <p class="fst-italic">{{ 'wizard.step-2' | transloco }}</p>
+            <br />
+            <input type="file" id="myfile" name="myfile" />
+            <div class="row">
+                <div class="col text-end mt-3">
+                    <button type="button" class="btn btn-light" matStepperNext>{{ 'next' | transloco }}</button>
+                </div>
+            </div>
+        </ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>{{ 'step' | transloco }} 3 - {{ 'wizard.personal-data' | transloco }}</ng-template>
+        <p class="fst-italic">{{ 'wizard.step-3' | transloco }}</p>
 
-wizard (may be each step content is a separate component) <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="name">{{ 'personal.name' | transloco }}</span>
+            <input type="text" class="form-control" placeholder="Nikola" aria-label="name" aria-describedby="name" />
+        </div>
 
-language switcher <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="middle-name">{{ 'personal.middle-name' | transloco }}</span>
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Georgiev"
+                aria-label="middle-name"
+                aria-describedby="middle-name"
+            />
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="family-name">{{ 'personal.family-name' | transloco }}</span>
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Georgiev"
+                aria-label="family-name"
+                aria-describedby="family-name"
+            />
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="birthdate">{{ 'personal.birthdate' | transloco }}</span>
+            <input
+                type="text"
+                class="form-control"
+                placeholder="1986-10-19"
+                aria-label="birthdate"
+                aria-describedby="birthdate"
+            />
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="gender">{{ 'personal.gender' | transloco }}</label>
+            <select class="form-select" id="gender">
+                <option value="1" selected>male</option>
+                <option value="2">female</option>
+                <option value="3">other</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="origin-country">{{ 'personal.origin-country' | transloco }}</label>
+            <select class="form-select" id="origin-country">
+                <option selected>Bulgaria</option>
+                <option value="1">Ukraine</option>
+                <option value="2">Syria</option>
+                <option value="3">Niger</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="host-country">{{ 'personal.host-country' | transloco }}</label>
+            <select class="form-select" id="host-country">
+                <option selected>...</option>
+                <option value="1">Germany</option>
+                <option value="2">France</option>
+                <option value="3">Denmark</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="col text-end mt-3">
+                <button type="button" class="btn btn-light" matStepperNext>{{ 'next' | transloco }}</button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel
+            >{{ 'step' | transloco }} 4 - {{ 'wizard.additional-documents' | transloco }}</ng-template
+        >
+        <p class="fst-italic">{{ 'wizard.step-4' | transloco }}</p>
+
+        <div class="border rounded">
+            <label class="m-1" for="myfile1">{{ 'documents.doc-rent' | transloco }}</label>
+            <input type="file" id="myfile1" name="myfile" />
+        </div>
+
+        <div class="border rounded mt-3">
+            <label class="m-1" for="myfile2">{{ 'documents.doc-work' | transloco }}</label>
+            <input type="file" id="myfile2" name="myfile" />
+        </div>
+
+        <div class="border rounded mt-3">
+            <label class="m-1" for="myfile2">{{ 'other' | transloco }}</label>
+            <input type="file" id="myfile2" name="myfile" />
+        </div>
+
+        <div class="row">
+            <div class="col-6 text-start mt-3">
+                <button type="button" class="btn btn-light" matStepperNext>{{ 'skip' | transloco }}</button>
+            </div>
+            <div class="col-6 text-end mt-3">
+                <button type="button" class="btn btn-light" matStepperNext>{{ 'next' | transloco }}</button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>{{ 'step' | transloco }} 5 - {{ 'wizard.take-photo' | transloco }}</ng-template>
+        <p class="fst-italic">{{ 'wizard.step-5' | transloco }}</p>
+
+        <div class="row">
+            <div class="col text-end mt-3">
+                <button type="button" class="btn btn-light" (click)="finishWizard()">{{ 'finish' | transloco }}</button>
+            </div>
+        </div>
+    </mat-step>
+</mat-stepper>
+
+<div class="language-switcher-container">
+    <app-language-switcher></app-language-switcher>
+</div>
+
+<div id="full-screen-loader" [ngClass]="{'d-none' : hideLoader}">
+  <div class="spinner-border text-primary" role="status" id="full-screen-loader-spinner">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

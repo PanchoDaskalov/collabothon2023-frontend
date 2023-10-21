@@ -1,7 +1,10 @@
 {
   "hello": "Hello",
   "register": "Register",
-  "login": "Login here >>",
+  "login": "Login",
+  "login-button": "Login here >>",
+  "onboarding": "Onboarding",
+  "step": "Step",
   "language": "Language",
   "landing-description": "Onboarding migrants in the local financial system.",
   "landing-description-2": "Your fortune starts here",
@@ -10,10 +13,13 @@
   "english": "English",
   "bulgarian": "Български",
   "next": "next",
+  "skip": "skip",
   "other": "other",
+  "finish": "finish",
   "banks-n-services": "Bank Accounts & Services",
   "learn-about-money": "Learn About Money",
   "community-hub": "Community Hub",
+  "start": "Start",
   "footer": {
     "home": "home",
     "banks": "banks",
@@ -26,23 +32,29 @@
     "personal-data": "Personal Data",
     "additional-documents": "Additional Documents",
     "take-photo": "Take a Photo",
-    "data-collection-completed": "Required Data Has Been Collected"
+    "data-collection-completed": "Required Data Has Been Collected",
+    "step-1": "This wizard will take you through a short process of collecting all required data. Once you have scanned, uploaded, or filled everything, you will be redirected to the dashboard. There you will be able to fill documents for a new bank account, learn or interact with a rich community. Good luck.",
+    "step-2": "Please scan your ID document (personal ID, if the host country has issued you one, or an international passport)",
+    "step-3": "Check and fix any missing or erroneous data.",
+    "step-4": "Scan or attach any additional documents you have.",
+    "step-5": "Take a picture of yourself. Make sure you are clearly recognizable."
   },
   "personal": {
     "name": "name",
     "middle-name": "middle name",
     "family-name": "family name",
-    "sex": "sex",
+    "gender": "gender",
     "e-mail": "e-mail",
     "origin-country": "Origin Country",
     "host-country": "Host Country",
     "phone-number": "Phone Number",
-    "password": "Password"
+    "password": "Password",
+    "birthdate": "Birthdate"
   },
   "documents": {
-    "uploaded": "качен",
-    "doc-id": "личен документ",
-    "doc-rent": "договор за наем",
-    "doc-work": "договор за работа"
+    "uploaded": "uploaded",
+    "doc-id": "identity document",
+    "doc-rent": "rent contract",
+    "doc-work": "employment contract"
   }
 }

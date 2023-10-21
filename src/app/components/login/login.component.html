@@ -1,4 +1,4 @@
-<app-header [pagetitle]="'Login'" [showPhoto]="false" [subtitle]="''"></app-header>
+<app-header [pagetitle]="'login' | transloco" [showPhoto]="false" [subtitle]="''"></app-header>
 
 <div class="row my-5 spacer">&nbsp;</div>
 <div class="row my-5 spacer">&nbsp;</div>
@@ -61,4 +61,8 @@
 
 <div class="alert alert-success" *ngIf="isLoggedIn">
     <div *ngFor="let role of roles">Logged in as {{ role.authority }}.</div>
+</div>
+
+<div class="language-switcher-container">
+    <app-language-switcher></app-language-switcher>
 </div>

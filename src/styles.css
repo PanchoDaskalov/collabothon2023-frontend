@@ -12,6 +12,8 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: #EAF6FF;
+  padding-top: 0.5rem;
 }
 
 /* COMMON */
@@ -21,6 +23,22 @@ html {
 
 .container-rounded {
   border-radius: 15px;
+}
+
+#full-screen-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+}
+
+#full-screen-loader-spinner {
+  position: absolute;
+  top: 50%;
+  left: 45%;
 }
 
 /* OVERWRITING BOOTSTRAP */

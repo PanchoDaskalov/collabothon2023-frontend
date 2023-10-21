@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { authInterceptorProviders } from './interceptors/auth.interceptor'
 
+import { MatButtonModule } from '@angular/material/button'
+import { MatStepperModule } from '@angular/material/stepper'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+
 import { HomeComponent } from './components/home/home.component'
 import { LoginComponent } from './components/login/login.component'
 import { RegisterComponent } from './components/register/register.component'
@@ -17,13 +22,13 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { BankListComponent } from './components/bank-list/bank-list.component'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 import { BankSingleComponent } from './components/bank-single/bank-single.component'
-import { HeaderComponent } from './components/header/header.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { LearnComponent } from './components/learn/learn.component';
-import { HubComponent } from './components/hub/hub.component';
-import { TranslocoRootModule } from './transloco-root.module';
-import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
+import { HeaderComponent } from './components/header/header.component'
+import { ProfileComponent } from './components/profile/profile.component'
+import { FooterComponent } from './components/footer/footer.component'
+import { LearnComponent } from './components/learn/learn.component'
+import { HubComponent } from './components/hub/hub.component'
+import { TranslocoRootModule } from './transloco-root.module'
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component'
 
 @NgModule({
     declarations: [
@@ -51,6 +56,9 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
         FormsModule,
         ReactiveFormsModule,
         TranslocoRootModule,
+        MatButtonModule,
+        MatStepperModule,
+        MatSlideToggleModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent],
