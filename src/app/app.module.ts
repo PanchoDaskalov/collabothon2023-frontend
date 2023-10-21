@@ -22,6 +22,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LearnComponent } from './components/learn/learn.component';
 import { HubComponent } from './components/hub/hub.component';
+import { TranslocoRootModule } from './transloco-root.module';
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +41,7 @@ import { HubComponent } from './components/hub/hub.component';
         FooterComponent,
         LearnComponent,
         HubComponent,
+        LanguageSwitcherComponent,
     ],
     imports: [
         BrowserModule,
@@ -47,6 +50,7 @@ import { HubComponent } from './components/hub/hub.component';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        TranslocoRootModule,
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent],

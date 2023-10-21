@@ -1,0 +1,45 @@
+{
+  "hello": "Здравей",
+  "register": "Регистрация",
+  "language": "Език",
+  "landing-description": "Помагаме на мигранти да навлязат в местната финансова система.<br /><br />Богатството започва тук.",
+  "trusted-by": "Наши партньори",
+  "no-bank-account": "ОЩЕ НЯМАШ БАНКОВА СМЕТКА?",
+  "english": "English",
+  "bulgarian": "Български",
+  "next": "напред",
+  "other": "друго",
+  "banks-n-services": "Банкови сметки и услуги",
+  "learn-about-money": "Уроци по лични финанси",
+  "community-hub": "Общност",
+  "footer": {
+    "home": "начало",
+    "banks": "банки",
+    "learn": "курсове",
+    "hub": "общност"
+  },
+  "wizard": {
+    "how-it-works": "Инструкция",
+    "scan-your-id": "Сканирай лична карта / паспорт",
+    "personal-data": "Лични данни",
+    "additional-documents": "Допълнителни документи",
+    "take-photo": "Снимайте се",
+    "data-collection-completed": "Нужните данни бяха събрани"
+  },
+  "personal": {
+    "name": "име",
+    "middle-name": "бащино",
+    "family-name": "фамилия",
+    "sex": "пол",
+    "e-mail": "ел. поща",
+    "origin-country": "Държава на произход",
+    "current-country": "Текуща държава",
+    "phone-number": "Телефон"
+  },
+  "documents": {
+    "uploaded": "качен",
+    "doc-id": "личен документ",
+    "doc-rent": "договор за наем",
+    "doc-work": "договор за работа"
+  }
+}
