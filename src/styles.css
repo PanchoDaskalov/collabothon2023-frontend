@@ -14,12 +14,6 @@ html {
   width: 100%;
 }
 
-select:focus-visible {
-  border: 0 !important;
-  outline-width: 0 !important;
-  outline: none !important;
-}
-
 .color-black {
   color: black !important;
 }
