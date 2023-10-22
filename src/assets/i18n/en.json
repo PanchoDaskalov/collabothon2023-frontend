@@ -21,6 +21,8 @@
   "community-hub": "Community Hub",
   "start": "Start",
   "see-more": "See More >>",
+  "status": "status",
+  "apply": "APPLY",
   "footer": {
     "home": "home",
     "banks": "banks",
@@ -54,8 +56,14 @@
   },
   "documents": {
     "uploaded": "uploaded",
-    "doc-id": "identity document",
-    "doc-rent": "rent contract",
-    "doc-work": "employment contract"
+    "doc-id": "ID Document",
+    "doc-rent": "Rent Contract",
+    "doc-work": "Employment Contract"
+  },
+  "banks": {
+    "standard-account": "Standard Bank Account",
+    "personal-details": "Personal Details",
+    "bank-tip": "Tip: when you click APPLY the bank will receive a digital copy of your personal data and required documents. Once your application is active it will take up to 2 work days to process it. Take the time to browse our learn section.",
+    "success": "You successfully applied for a bank account. Expect results in the next 2 business days."
   }
 }

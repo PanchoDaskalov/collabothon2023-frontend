@@ -25,6 +25,14 @@ html {
   color: #656565 !important;
 }
 
+.mifi-color-yellow-branding {
+  color: #FFCF31;
+}
+
+.mifi-color-link {
+  color: #0050AD;
+}
+
 .container-rounded {
   border-radius: 15px;
 }
@@ -62,15 +70,7 @@ html {
   height: 1rem;
 }
 
-.small-container-title {
-  font-size: 1rem;
-}
-
-.mifi-color-link {
-  color: #0050AD;
-}
-
-.mifi-see-more {
+.fs-1rem, .small-container-title, .mifi-see-more {
   font-size: 1rem;
 }
 

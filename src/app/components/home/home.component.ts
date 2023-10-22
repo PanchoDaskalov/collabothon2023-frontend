@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
     constructor(private userService: UserService) {
       this.banklist = [
         {
-          name: "DSK Bank",
+          name: "Commerzbank",
           img: "coba-logo.png",
-          id: "dsk",
+          id: "commerzbank",
           flagInProgress: true,
           flagCompliant: true
         },

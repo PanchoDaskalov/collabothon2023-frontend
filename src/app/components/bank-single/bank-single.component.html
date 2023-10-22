@@ -1,10 +1,76 @@
-<app-header [pagetitle]="id" [showPhoto]="true" [subtitle]="''"></app-header>
-bank id: {{id}} <br>
+<app-header [pagetitle]="bank.name" [showPhoto]="true" [subtitle]="bank.type"></app-header>
 
-1. fetch bank info from backend <br>
-2. show bank description <br>
-3. based on status, set button APPLY or status <br>
-4. animate eligibility <br>
-5. langugage switcher <br>
+<div class="my-0 spacer">&nbsp;</div>
+<div class="row class">
+    <div class="col container-rounded bg-white mx-2 py-3 fs-1rem">
+        {{ bank.description }}
+    </div>
+</div>
+
+<div class="my-0 spacer">&nbsp;</div>
+<div class="row class">
+    <div class="col container-rounded bg-white mx-2 py-3 fs-1rem">
+        <h2>{{ 'banks.standard-account' | transloco }}</h2>
+        <div class="row border-bottom mb-2 p-1">
+            <div class="col-10">
+                {{ 'banks.personal-details' | transloco }}
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <mat-icon class="mifi-color-yellow-branding">check_circle</mat-icon>
+            </div>
+        </div>
+        <div class="row border-bottom mb-2 p-1">
+            <div class="col-10">
+                {{ 'documents.doc-id' | transloco }}
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <mat-icon class="mifi-color-yellow-branding">check_circle</mat-icon>
+            </div>
+        </div>
+        <div class="row border-bottom mb-2 p-1">
+            <div class="col-10">
+                {{ 'documents.doc-rent' | transloco }}
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <mat-icon class="mifi-color-yellow-branding">check_circle</mat-icon>
+            </div>
+        </div>
+        <div class="row border-bottom mb-2 p-1">
+            <div class="col-10">
+                {{ 'documents.doc-work' | transloco }}
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <mat-icon class="mifi-color-yellow-branding">check_circle</mat-icon>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row p-1 d-flex align-items-center">
+            <div class="col-10 fs-4">
+                {{ 'status' | transloco }}
+            </div>
+            <div class="col-2 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" (click)="onApply()" >
+                    {{ 'apply' | transloco }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="my-0 spacer">&nbsp;</div>
+<div class="row class">
+    <div class="col container-rounded text-muted mx-2 py-3 fs-1rem fst-italic">
+        {{ 'banks.bank-tip' | transloco }}
+    </div>
+</div>
+
+<div id="full-screen-loader" [ngClass]="{ 'd-none': hideLoader }">
+    <div class="spinner-border text-primary" role="status" id="full-screen-loader-spinner">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
 
 <app-footer></app-footer>
+
+

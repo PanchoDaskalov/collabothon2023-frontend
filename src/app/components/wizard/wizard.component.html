@@ -17,7 +17,7 @@
         <ng-template matStepContent>
             <p class="fst-italic">{{ 'wizard.step-2' | transloco }}</p>
             <br />
-            <input type="file" id="myfile" name="myfile" />
+            <input type="file" id="myfile" name="myfile" (change)="onImageUploaded()" />
             <div class="row">
                 <div class="col text-end mt-3">
                     <button type="button" class="btn btn-light" matStepperNext>{{ 'next' | transloco }}</button>
@@ -90,9 +90,33 @@
             <label class="input-group-text" for="host-country">{{ 'personal.host-country' | transloco }}</label>
             <select class="form-select" id="host-country">
                 <option selected>...</option>
-                <option value="1">Germany</option>
-                <option value="2">France</option>
-                <option value="3">Denmark</option>
+                <option value="1">Austria</option>
+                <option value="2">Belgium</option>
+                <option value="3">Bulgaria</option>
+                <option value="4">Croatia</option>
+                <option value="5">Republic of Cyprus</option>
+                <option value="6">Czech Republic</option>
+                <option value="7">Denmark</option>
+                <option value="8">Estonia</option>
+                <option value="9">Finland</option>
+                <option value="10">France</option>
+                <option value="11">Germany</option>
+                <option value="12">Greece</option>
+                <option value="13">Hungary</option>
+                <option value="14">Ireland</option>
+                <option value="15">Italy</option>
+                <option value="16">Latvia</option>
+                <option value="17">Lithuania</option>
+                <option value="18">Luxembourg</option>
+                <option value="19">Malta</option>
+                <option value="20">Netherlands</option>
+                <option value="21">Poland</option>
+                <option value="22">Portugal</option>
+                <option value="23">Romania</option>
+                <option value="24">Slovakia</option>
+                <option value="25">Slovenia</option>
+                <option value="26">Spain</option>
+                <option value="27">Sweden</option>
             </select>
         </div>
 
@@ -110,17 +134,17 @@
 
         <div class="border rounded">
             <label class="m-1" for="myfile1">{{ 'documents.doc-rent' | transloco }}</label>
-            <input type="file" id="myfile1" name="myfile" />
+            <input type="file" id="myfile1" name="myfile" (change)="onImageUploaded()" />
         </div>
 
         <div class="border rounded mt-3">
             <label class="m-1" for="myfile2">{{ 'documents.doc-work' | transloco }}</label>
-            <input type="file" id="myfile2" name="myfile" />
+            <input type="file" id="myfile2" name="myfile" (change)="onImageUploaded()" />
         </div>
 
         <div class="border rounded mt-3">
             <label class="m-1" for="myfile2">{{ 'other' | transloco }}</label>
-            <input type="file" id="myfile2" name="myfile" />
+            <input type="file" id="myfile2" name="myfile" (change)="onImageUploaded()" />
         </div>
 
         <div class="row">
@@ -148,8 +172,8 @@
     <app-language-switcher></app-language-switcher>
 </div>
 
-<div id="full-screen-loader" [ngClass]="{'d-none' : hideLoader}">
-  <div class="spinner-border text-primary" role="status" id="full-screen-loader-spinner">
-    <span class="visually-hidden">Loading...</span>
-  </div>
+<div id="full-screen-loader" [ngClass]="{ 'd-none': hideLoader }">
+    <div class="spinner-border text-primary" role="status" id="full-screen-loader-spinner">
+        <span class="visually-hidden">Loading...</span>
+    </div>
 </div>

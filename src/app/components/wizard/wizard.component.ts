@@ -14,6 +14,14 @@ export class WizardComponent {
         this.hideLoader = true
     }
 
+    onImageUploaded () {
+      this.hideLoader = false
+        let that = this
+        setTimeout(function () {
+            that.hideLoader = true
+        }, Math.random() * 500 + 750)
+    }
+
     finishWizard() {
         this.hideLoader = false
         let that = this
