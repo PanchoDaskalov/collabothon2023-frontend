@@ -11,8 +11,8 @@ import { authInterceptorProviders } from './interceptors/auth.interceptor'
 
 import { MatButtonModule } from '@angular/material/button'
 import { MatStepperModule } from '@angular/material/stepper'
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatIconModule } from '@angular/material/icon'
 
 import { HomeComponent } from './components/home/home.component'
 import { LoginComponent } from './components/login/login.component'
@@ -58,7 +58,8 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
         TranslocoRootModule,
         MatButtonModule,
         MatStepperModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatIconModule
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent],

@@ -19,6 +19,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("showPhoto: ", this.showPhoto)
+    // console.log("showPhoto: ", this.showPhoto)
   }
 }

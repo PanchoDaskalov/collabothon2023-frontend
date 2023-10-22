@@ -21,6 +21,10 @@ html {
   color: black !important;
 }
 
+.color-dark-gray {
+  color: #656565 !important;
+}
+
 .container-rounded {
   border-radius: 15px;
 }
@@ -40,6 +44,36 @@ html {
   top: 50%;
   left: 45%;
 }
+
+.small-container {
+  background-color: #E9E9E9;
+}
+
+.small-container-entry {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  color: #0050AD;
+  font-size: 1rem;
+}
+
+.small-container-entry img {
+  height: 1rem;
+}
+
+.small-container-title {
+  font-size: 1rem;
+}
+
+.mifi-color-link {
+  color: #0050AD;
+}
+
+.mifi-see-more {
+  font-size: 1rem;
+}
+
 
 /* OVERWRITING BOOTSTRAP */
 .input-group-text {
