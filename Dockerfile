@@ -21,3 +21,6 @@ COPY tsconfig.app.json .
 
 # Build the Angular project for production
 RUN ng build --configuration=development
+
+# Start the Angular application (modify as needed)
+CMD ["npm", "start"]
