@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit{
       this.isLoginFailed = false;
 
       this.roles = this.tokenStorageService.getUser().roles;
-      this._router.navigate(['/'])
+      this._router.navigate(['/wizard'])
 
       //this.reloadPage();
     },
