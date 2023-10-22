@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatIconModule } from '@angular/material/icon'
+import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog'
 
 import { HomeComponent } from './components/home/home.component'
 import { LoginComponent } from './components/login/login.component'
@@ -59,7 +60,9 @@ import { LanguageSwitcherComponent } from './components/language-switcher/langua
         MatButtonModule,
         MatStepperModule,
         MatSlideToggleModule,
-        MatIconModule
+        MatIconModule,
+        MatButtonModule,
+        MatDialogModule,
     ],
     providers: [authInterceptorProviders],
     bootstrap: [AppComponent],
