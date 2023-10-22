@@ -1,0 +1,103 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  creationTimestamp: '2023-10-21T14:40:15Z'
+  generation: 3
+  managedFields:
+    - apiVersion: tekton.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:finally': {}
+          'f:params': {}
+          'f:resources': {}
+          'f:tasks': {}
+          'f:workspaces': {}
+      manager: Mozilla
+      operation: Update
+      time: '2023-10-22T07:21:36Z'
+  name: collabothon-2023
+  namespace: collabothon-2023-sf
+  resourceVersion: '5381225'
+  uid: 16989148-e77e-4acd-873b-89108a7e9613
+spec:
+  params:
+    - default: 'https://github.com/kvabakoma/collabothon2023-frontend.git'
+      name: gitrepo
+      type: string
+  tasks:
+    - name: git-clone
+      params:
+        - name: url
+          value: $(params.gitrepo)
+        - name: revision
+          value: ''
+        - name: refspec
+          value: ''
+        - name: submodules
+          value: 'true'
+        - name: depth
+          value: '1'
+        - name: sslVerify
+          value: 'true'
+        - name: crtFileName
+          value: ca-bundle.crt
+        - name: subdirectory
+          value: ''
+        - name: sparseCheckoutDirectories
+          value: ''
+        - name: deleteExisting
+          value: 'true'
+        - name: httpProxy
+          value: ''
+        - name: httpsProxy
+          value: ''
+        - name: noProxy
+          value: ''
+        - name: verbose
+          value: 'true'
+        - name: gitInitImage
+          value: >-
+            gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.40.2
+        - name: userHome
+          value: /home/git
+      taskRef:
+        kind: Task
+        name: git-clone
+      workspaces:
+        - name: output
+          workspace: source
+    - name: buildah
+      params:
+        - name: IMAGE
+          value: quay.io/pancho_daskalov/collabothon_2023
+        - name: BUILDER_IMAGE
+          value: >-
+            registry.redhat.io/rhel8/buildah@sha256:bafb452c5346d8517d94639efa90e8d6d72cd11e45d49369c3d9305784d1c3f6
+        - name: STORAGE_DRIVER
+          value: vfs
+        - name: DOCKERFILE
+          value: ./Dockerfile
+        - name: CONTEXT
+          value: .
+        - name: TLSVERIFY
+          value: 'true'
+        - name: FORMAT
+          value: oci
+        - name: BUILD_EXTRA_ARGS
+          value: ''
+        - name: PUSH_EXTRA_ARGS
+          value: ''
+        - name: SKIP_PUSH
+          value: 'false'
+      runAfter:
+        - git-clone
+      taskRef:
+        kind: ClusterTask
+        name: buildah
+      workspaces:
+        - name: source
+          workspace: source
+  workspaces:
+    - name: source

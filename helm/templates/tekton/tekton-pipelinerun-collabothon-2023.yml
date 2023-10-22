@@ -1,0 +1,231 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  annotations:
+    chains.tekton.dev/signed: 'true'
+    pipeline.openshift.io/started-by: user14
+  resourceVersion: '5391830'
+  name: collabothon-2023-fbus9j
+  uid: b46b24b0-a41f-4594-9577-0da6d563ce21
+  creationTimestamp: '2023-10-22T07:21:42Z'
+  generation: 1
+  managedFields:
+    - apiVersion: tekton.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:pipeline.openshift.io/started-by': {}
+          'f:labels':
+            .: {}
+            'f:tekton.dev/pipeline': {}
+        'f:spec':
+          .: {}
+          'f:params': {}
+          'f:pipelineRef':
+            .: {}
+            'f:name': {}
+          'f:resources': {}
+          'f:status': {}
+          'f:workspaces': {}
+      manager: Mozilla
+      operation: Update
+      time: '2023-10-22T07:21:42Z'
+    - apiVersion: tekton.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:chains.tekton.dev/signed': {}
+          'f:finalizers':
+            .: {}
+            'v:"chains.tekton.dev/pipelinerun"': {}
+      manager: openshift-pipelines-chains-controller
+      operation: Update
+      time: '2023-10-22T07:30:10Z'
+    - apiVersion: tekton.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:childReferences': {}
+          'f:completionTime': {}
+          'f:conditions': {}
+          'f:pipelineSpec':
+            .: {}
+            'f:params': {}
+            'f:tasks': {}
+            'f:workspaces': {}
+          'f:provenance':
+            .: {}
+            'f:featureFlags':
+              'f:ScopeWhenExpressionsToTask': {}
+              'f:SetSecurityContext': {}
+              'f:DisableCredsInit': {}
+              'f:DisableAffinityAssistant': {}
+              'f:VerificationNoMatchPolicy': {}
+              'f:RunningInEnvWithInjectedSidecars': {}
+              'f:EnableTektonOCIBundles': {}
+              .: {}
+              'f:MaxResultSize': {}
+              'f:AwaitSidecarReadiness': {}
+              'f:EnableProvenanceInStatus': {}
+              'f:Coschedule': {}
+              'f:ResultExtractionMethod': {}
+              'f:EnableAPIFields': {}
+              'f:RequireGitSSHSecretKnownHosts': {}
+              'f:EnforceNonfalsifiability': {}
+              'f:SendCloudEventsForRuns': {}
+          'f:startTime': {}
+      manager: openshift-pipelines-controller
+      operation: Update
+      subresource: status
+      time: '2023-10-22T07:30:10Z'
+  namespace: collabothon-2023-sf
+  finalizers:
+    - chains.tekton.dev/pipelinerun
+  labels:
+    tekton.dev/pipeline: collabothon-2023
+spec:
+  params:
+    - name: gitrepo
+      value: 'https://github.com/kvabakoma/collabothon2023-frontend.git'
+  pipelineRef:
+    name: collabothon-2023
+  serviceAccountName: pipeline
+  timeouts:
+    pipeline: 1h0m0s
+  workspaces:
+    - name: source
+      volumeClaimTemplate:
+        metadata:
+          creationTimestamp: null
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+          storageClassName: standard-csi
+          volumeMode: Filesystem
+        status: {}
+status:
+  childReferences:
+    - apiVersion: tekton.dev/v1
+      kind: TaskRun
+      name: collabothon-2023-fbus9j-git-clone
+      pipelineTaskName: git-clone
+    - apiVersion: tekton.dev/v1
+      kind: TaskRun
+      name: collabothon-2023-fbus9j-buildah
+      pipelineTaskName: buildah
+  completionTime: '2023-10-22T07:30:10Z'
+  conditions:
+    - lastTransitionTime: '2023-10-22T07:30:10Z'
+      message: 'Tasks Completed: 2 (Failed: 0, Cancelled 0), Skipped: 0'
+      reason: Succeeded
+      status: 'True'
+      type: Succeeded
+  pipelineSpec:
+    params:
+      - default: 'https://github.com/kvabakoma/collabothon2023-frontend.git'
+        name: gitrepo
+        type: string
+    tasks:
+      - name: git-clone
+        params:
+          - name: url
+            value: 'https://github.com/kvabakoma/collabothon2023-frontend.git'
+          - name: revision
+            value: ''
+          - name: refspec
+            value: ''
+          - name: submodules
+            value: 'true'
+          - name: depth
+            value: '1'
+          - name: sslVerify
+            value: 'true'
+          - name: crtFileName
+            value: ca-bundle.crt
+          - name: subdirectory
+            value: ''
+          - name: sparseCheckoutDirectories
+            value: ''
+          - name: deleteExisting
+            value: 'true'
+          - name: httpProxy
+            value: ''
+          - name: httpsProxy
+            value: ''
+          - name: noProxy
+            value: ''
+          - name: verbose
+            value: 'true'
+          - name: gitInitImage
+            value: >-
+              gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.40.2
+          - name: userHome
+            value: /home/git
+        taskRef:
+          kind: Task
+          name: git-clone
+        workspaces:
+          - name: output
+            workspace: source
+        status:
+          reason: Failed
+      - name: buildah
+        params:
+          - name: IMAGE
+            value: quay.io/pancho_daskalov/collabothon_2023
+          - name: BUILDER_IMAGE
+            value: >-
+              registry.redhat.io/rhel8/buildah@sha256:bafb452c5346d8517d94639efa90e8d6d72cd11e45d49369c3d9305784d1c3f6
+          - name: STORAGE_DRIVER
+            value: vfs
+          - name: DOCKERFILE
+            value: ./Dockerfile
+          - name: CONTEXT
+            value: .
+          - name: TLSVERIFY
+            value: 'true'
+          - name: FORMAT
+            value: oci
+          - name: BUILD_EXTRA_ARGS
+            value: ''
+          - name: PUSH_EXTRA_ARGS
+            value: ''
+          - name: SKIP_PUSH
+            value: 'false'
+        runAfter:
+          - git-clone
+        taskRef:
+          kind: ClusterTask
+          name: buildah
+        workspaces:
+          - name: source
+            workspace: source
+        status:
+          reason: Failed
+    workspaces:
+      - name: source
+  provenance:
+    featureFlags:
+      MaxResultSize: 4096
+      AwaitSidecarReadiness: true
+      Coschedule: workspaces
+      ResultExtractionMethod: termination-message
+      SendCloudEventsForRuns: false
+      EnforceNonfalsifiability: ''
+      ScopeWhenExpressionsToTask: false
+      SetSecurityContext: false
+      DisableCredsInit: false
+      DisableAffinityAssistant: true
+      EnableAPIFields: beta
+      RequireGitSSHSecretKnownHosts: false
+      RunningInEnvWithInjectedSidecars: true
+      EnableTektonOCIBundles: false
+      VerificationNoMatchPolicy: ignore
+      EnableProvenanceInStatus: true
+  startTime: '2023-10-22T07:21:42Z'

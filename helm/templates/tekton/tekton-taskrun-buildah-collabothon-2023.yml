@@ -1,0 +1,317 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  annotations:
+    chains.tekton.dev/signed: 'true'
+    pipeline.openshift.io/started-by: user14
+    pipeline.tekton.dev/release: 77f7b15
+  resourceVersion: '5391829'
+  name: collabothon-2023-fbus9j-buildah
+  uid: ac098d30-82b1-4a8b-9678-c74974ef438b
+  creationTimestamp: '2023-10-22T07:21:55Z'
+  generation: 1
+  managedFields:
+    - apiVersion: tekton.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:pipeline.openshift.io/started-by': {}
+            'f:pipeline.tekton.dev/release': {}
+          'f:labels':
+            .: {}
+            'f:tekton.dev/clusterTask': {}
+            'f:tekton.dev/memberOf': {}
+            'f:tekton.dev/pipeline': {}
+            'f:tekton.dev/pipelineRun': {}
+            'f:tekton.dev/pipelineTask': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"b46b24b0-a41f-4594-9577-0da6d563ce21"}': {}
+        'f:spec':
+          .: {}
+          'f:params': {}
+          'f:serviceAccountName': {}
+          'f:taskRef':
+            .: {}
+            'f:kind': {}
+            'f:name': {}
+          'f:workspaces': {}
+      manager: openshift-pipelines-controller
+      operation: Update
+      time: '2023-10-22T07:21:55Z'
+    - apiVersion: tekton.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:chains.tekton.dev/signed': {}
+          'f:finalizers':
+            .: {}
+            'v:"chains.tekton.dev"': {}
+      manager: openshift-pipelines-chains-controller
+      operation: Update
+      time: '2023-10-22T07:30:10Z'
+    - apiVersion: tekton.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:completionTime': {}
+          'f:conditions': {}
+          'f:podName': {}
+          'f:provenance':
+            .: {}
+            'f:featureFlags':
+              'f:ScopeWhenExpressionsToTask': {}
+              'f:SetSecurityContext': {}
+              'f:DisableCredsInit': {}
+              'f:DisableAffinityAssistant': {}
+              'f:VerificationNoMatchPolicy': {}
+              'f:RunningInEnvWithInjectedSidecars': {}
+              'f:EnableTektonOCIBundles': {}
+              .: {}
+              'f:MaxResultSize': {}
+              'f:AwaitSidecarReadiness': {}
+              'f:EnableProvenanceInStatus': {}
+              'f:Coschedule': {}
+              'f:ResultExtractionMethod': {}
+              'f:EnableAPIFields': {}
+              'f:RequireGitSSHSecretKnownHosts': {}
+              'f:EnforceNonfalsifiability': {}
+              'f:SendCloudEventsForRuns': {}
+          'f:results': {}
+          'f:startTime': {}
+          'f:steps': {}
+          'f:taskSpec':
+            .: {}
+            'f:description': {}
+            'f:params': {}
+            'f:results': {}
+            'f:steps': {}
+            'f:volumes': {}
+            'f:workspaces': {}
+      manager: openshift-pipelines-controller
+      operation: Update
+      subresource: status
+      time: '2023-10-22T07:30:10Z'
+  namespace: collabothon-2023-sf
+  ownerReferences:
+    - apiVersion: tekton.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: PipelineRun
+      name: collabothon-2023-fbus9j
+      uid: b46b24b0-a41f-4594-9577-0da6d563ce21
+  finalizers:
+    - chains.tekton.dev
+  labels:
+    app.kubernetes.io/managed-by: tekton-pipelines
+    tekton.dev/clusterTask: buildah
+    tekton.dev/memberOf: tasks
+    tekton.dev/pipeline: collabothon-2023
+    tekton.dev/pipelineRun: collabothon-2023-fbus9j
+    tekton.dev/pipelineTask: buildah
+spec:
+  params:
+    - name: IMAGE
+      value: quay.io/pancho_daskalov/collabothon_2023
+    - name: BUILDER_IMAGE
+      value: >-
+        registry.redhat.io/rhel8/buildah@sha256:bafb452c5346d8517d94639efa90e8d6d72cd11e45d49369c3d9305784d1c3f6
+    - name: STORAGE_DRIVER
+      value: vfs
+    - name: DOCKERFILE
+      value: ./Dockerfile
+    - name: CONTEXT
+      value: .
+    - name: TLSVERIFY
+      value: 'true'
+    - name: FORMAT
+      value: oci
+    - name: BUILD_EXTRA_ARGS
+      value: ''
+    - name: PUSH_EXTRA_ARGS
+      value: ''
+    - name: SKIP_PUSH
+      value: 'false'
+  serviceAccountName: pipeline
+  taskRef:
+    kind: ClusterTask
+    name: buildah
+  timeout: 1h0m0s
+  workspaces:
+    - name: source
+      persistentVolumeClaim:
+        claimName: pvc-0d86b9a0f1
+status:
+  completionTime: '2023-10-22T07:30:10Z'
+  conditions:
+    - lastTransitionTime: '2023-10-22T07:30:10Z'
+      message: All Steps have completed executing
+      reason: Succeeded
+      status: 'True'
+      type: Succeeded
+  podName: collabothon-2023-fbus9j-buildah-pod
+  provenance:
+    featureFlags:
+      MaxResultSize: 4096
+      AwaitSidecarReadiness: true
+      Coschedule: workspaces
+      ResultExtractionMethod: termination-message
+      SendCloudEventsForRuns: false
+      EnforceNonfalsifiability: ''
+      ScopeWhenExpressionsToTask: false
+      SetSecurityContext: false
+      DisableCredsInit: false
+      DisableAffinityAssistant: true
+      EnableAPIFields: beta
+      RequireGitSSHSecretKnownHosts: false
+      RunningInEnvWithInjectedSidecars: true
+      EnableTektonOCIBundles: false
+      VerificationNoMatchPolicy: ignore
+      EnableProvenanceInStatus: true
+  startTime: '2023-10-22T07:21:55Z'
+  steps:
+    - container: step-build-and-push
+      imageID: >-
+        registry.redhat.io/rhel8/buildah@sha256:501fb03e3cef9cb50b37decfd3ea57403e86c3ecf22b1db22f4328bc940ea6c0
+      name: build-and-push
+      terminated:
+        containerID: >-
+          cri-o://de452baa3013905d85483116609c2ce16970182e5c67322ac4b616b23174499c
+        exitCode: 0
+        finishedAt: '2023-10-22T07:30:10Z'
+        message: >-
+          [{"key":"IMAGE_DIGEST","value":"sha256:26f1c1959e1f11d778d491e1883ee93d5e14abd01f3914922494aa925d8dd5b2","type":1},{"key":"IMAGE_URL","value":"quay.io/pancho_daskalov/collabothon_2023\n","type":1}]
+        reason: Completed
+        startedAt: '2023-10-22T07:22:15Z'
+  taskResults:
+    - name: IMAGE_DIGEST
+      type: string
+      value: 'sha256:26f1c1959e1f11d778d491e1883ee93d5e14abd01f3914922494aa925d8dd5b2'
+    - name: IMAGE_URL
+      type: string
+      value: |
+        quay.io/pancho_daskalov/collabothon_2023
+  taskSpec:
+    description: >-
+      Buildah task builds source into a container image and then pushes it to a
+      container registry.
+
+      Buildah Task builds source into a container image using Project Atomic's
+      Buildah build tool.It uses Buildah's support for building from
+      Dockerfiles, using its buildah bud command.This command executes the
+      directives in the Dockerfile to assemble a container image, then pushes
+      that image to a container registry.
+    params:
+      - description: Reference of the image buildah will produce.
+        name: IMAGE
+        type: string
+      - default: >-
+          registry.redhat.io/rhel8/buildah@sha256:bafb452c5346d8517d94639efa90e8d6d72cd11e45d49369c3d9305784d1c3f6
+        description: The location of the buildah builder image.
+        name: BUILDER_IMAGE
+        type: string
+      - default: vfs
+        description: Set buildah storage driver
+        name: STORAGE_DRIVER
+        type: string
+      - default: ./Dockerfile
+        description: Path to the Dockerfile to build.
+        name: DOCKERFILE
+        type: string
+      - default: .
+        description: Path to the directory to use as context.
+        name: CONTEXT
+        type: string
+      - default: 'true'
+        description: >-
+          Verify the TLS on the registry endpoint (for push/pull to a non-TLS
+          registry)
+        name: TLSVERIFY
+        type: string
+      - default: oci
+        description: 'The format of the built container, oci or docker'
+        name: FORMAT
+        type: string
+      - default: ''
+        description: Extra parameters passed for the build command when building images.
+        name: BUILD_EXTRA_ARGS
+        type: string
+      - default: ''
+        description: Extra parameters passed for the push command when pushing images.
+        name: PUSH_EXTRA_ARGS
+        type: string
+      - default: 'false'
+        description: Skip pushing the built image
+        name: SKIP_PUSH
+        type: string
+    results:
+      - description: Digest of the image just built.
+        name: IMAGE_DIGEST
+        type: string
+      - description: Image repository where the built image would be pushed to
+        name: IMAGE_URL
+        type: string
+    steps:
+      - image: >-
+          registry.redhat.io/rhel8/buildah@sha256:bafb452c5346d8517d94639efa90e8d6d72cd11e45d49369c3d9305784d1c3f6
+        name: build-and-push
+        resources: {}
+        script: >
+          buildah --storage-driver=vfs bud \
+             --format=oci \
+            --tls-verify=true --no-cache \
+            -f ./Dockerfile -t quay.io/pancho_daskalov/collabothon_2023 .
+
+          [[ "false" == "true" ]] && echo "Push skipped" && exit 0
+
+
+          if [[ "false" == "true" ]]; then
+
+            # if config.json exists at workspace root, we use that
+            if test -f "/config.json"; then
+              export DOCKER_CONFIG=""
+
+            # else we look for .dockerconfigjson at the root
+            elif test -f "/.dockerconfigjson"; then
+              cp "/.dockerconfigjson" "$HOME/.docker/config.json"
+              export DOCKER_CONFIG="$HOME/.docker"
+
+            # need to error out if neither files are present
+            else
+              echo "neither 'config.json' nor '.dockerconfigjson' found at workspace root"
+              exit 1
+            fi
+          fi
+
+
+          buildah --storage-driver=vfs push \
+             --tls-verify=true \
+            --digestfile /tmp/image-digest quay.io/pancho_daskalov/collabothon_2023 \
+            docker://quay.io/pancho_daskalov/collabothon_2023
+          cat /tmp/image-digest | tee /tekton/results/IMAGE_DIGEST
+
+          echo "quay.io/pancho_daskalov/collabothon_2023" | tee
+          /tekton/results/IMAGE_URL
+        securityContext:
+          capabilities:
+            add:
+              - SETFCAP
+        volumeMounts:
+          - mountPath: /var/lib/containers
+            name: varlibcontainers
+        workingDir: /workspace/source
+    volumes:
+      - emptyDir: {}
+        name: varlibcontainers
+    workspaces:
+      - name: source
+      - description: >-
+          An optional workspace that allows providing a .docker/config.json file
+          for Buildah to access the container registry. The file should be
+          placed at the root of the Workspace with name config.json or
+          .dockerconfigjson.
+        name: dockerconfig
+        optional: true
