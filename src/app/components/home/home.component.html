@@ -1,10 +1,10 @@
 <app-header [pagetitle]="('hello' | transloco) + ', Nikola'" [showPhoto]="true" [subtitle]="''"></app-header>
 
-<div class="my-5 spacer"></div>
+<div class="my-2 spacer">&nbsp;</div>
 <div class="text-muted small-container-title">{{ 'banks-n-services' | transloco }}</div>
 <div class="row class">
     <div class="col container-rounded small-container mx-2 py-3">
-        <div *ngFor="let bank of banklist" class="row bg-white mx-1 p-2 small-container-entry mb-3">
+        <div *ngFor="let bank of banklist" class="row bg-white mx-1 p-2 small-container-entry mb-3" [routerLink]="['/banks/'+bank.id]">
             <div class="col-1 text-start px-2">
                 <img [src]="'./assets/images/' + bank.img" />
             </div>
@@ -15,47 +15,44 @@
             </div>
         </div>
         <div class="row">
-            <div class="col text-end pe-4 mifi-color-link mifi-see-more">
+            <div class="col text-end pe-4 mifi-color-link mifi-see-more" [routerLink]="['/banks']">
                 {{ 'see-more' | transloco }}
             </div>
         </div>
     </div>
 </div>
 
-<div class="my-3 spacer"></div>
+<div class="my-0 spacer">&nbsp;</div>
 <div class="text-muted small-container-title">{{ 'learn-about-money' | transloco }}</div>
 <div class="row class">
   <div class="col container-rounded small-container mx-2 py-3">
-      <div *ngFor="let learn of learnlist" class="row bg-white mx-1 p-2 small-container-entry mb-3">
+      <div *ngFor="let learn of learnlist" class="row bg-white mx-1 p-2 small-container-entry mb-3"  [routerLink]="['/learn/'+learn.id]">
           <div class="col-9">{{ learn.name }}</div>
           <div class="col-3 color-dark-gray d-flex justify-content-end">
               <mat-icon *ngIf="learn.flagDone">task</mat-icon>
           </div>
       </div>
       <div class="row">
-          <div class="col text-end pe-4 mifi-color-link mifi-see-more">
+          <div class="col text-end pe-4 mifi-color-link mifi-see-more"  [routerLink]="['/learn']">
               {{ 'see-more' | transloco }}
           </div>
       </div>
   </div>
 </div>
 
-<div class="my-3 spacer"></div>
+<div class="my-0 spacer">&nbsp;</div>
 <div class="text-muted small-container-title">{{ 'community-hub' | transloco }}</div>
 <div class="row class">
     <div class="col container-rounded small-container mx-2 py-3">
         <div *ngFor="let hub of hublist" class="row bg-white mx-1 p-2 small-container-entry mb-3">
-            <div class="col-9">{{ hub.name }}</div>
-            <div class="col-3 color-dark-gray d-flex justify-content-end ">
-                {{hub.readingTime}}<mat-icon>timer</mat-icon>
-            </div>
+            <div class="col">{{ hub.name }}</div>
         </div>
         <div class="row">
-            <div class="col text-end pe-4 mifi-color-link mifi-see-more">
+            <div class="col text-end pe-4 mifi-color-link mifi-see-more" [routerLink]="['/hub']">
                 {{ 'see-more' | transloco }}
             </div>
         </div>
     </div>
 </div>
-
+<div class="my-5 spacer">&nbsp;</div>
 <app-footer></app-footer>

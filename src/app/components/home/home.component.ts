@@ -19,17 +19,20 @@ export class HomeComponent implements OnInit {
         {
           name: "DSK Bank",
           img: "coba-logo.png",
+          id: "dsk",
           flagInProgress: true,
           flagCompliant: true
         },
         {
           name: "FIB",
           img: "coba-logo.png",
+          id: "fib",
           flagInProgress: false,
           flagCompliant: true
         },
         {
           name: "Societe Generale",
+          id: "societegenerale",
           img: "coba-logo.png",
           flagInProgress: false,
           flagCompliant: true
@@ -39,31 +42,34 @@ export class HomeComponent implements OnInit {
       this.learnlist = [
         {
           name: "Intro to finance in Germany",
-          flagDone: false
+          flagDone: false,
+          id: "intro-to-finance"
         },
         {
           name: "How to open a bank account",
-          flagDone: false
+          flagDone: false,
+          id: "how-to-open-bank-account"
         },
         {
           name: "Taxes in Germany",
-          flagDone: false
+          flagDone: false,
+          id: "taxes-in-germany"
         }
       ]
 
       this.hublist = [
         {
-          name: "Jobs for migrants in Germany",
+          name: "Community forum",
           icon: "home",
           readingTime: 3
         },
         {
-          name: "hub 2",
+          name: "Job board",
           icon: "home",
           readingTime: 4
         },
         {
-          name: "hub 3",
+          name: "Community Events",
           icon: "home",
           readingTime: 5
         }
