@@ -4,6 +4,10 @@
 
 #slogan {
   line-height: 1.5 !important;
+  min-height: 24rem;
+  background-image: url("/assets/images/success-2.jpg");
+  background-size: cover;
+  color: white;
 }
 
 .landing-dummy-logo {
